@@ -10,7 +10,7 @@ return function (t) {
   var m0 = Math.pow(2,ms[Math.floor(t*2)%ms.length]/12)*100
   var m1 = Math.pow(2,ns[Math.floor(t/2)%ns.length]/12)*200
   var z = Math.pow(2,zs[Math.floor(t*4)%zs.length]/12)*100
-  return 0
+  return 2*(0
     + sin_(sin(20),t%1+5)*Math.pow((1-saw(r0))*0.5,8)*0.4
       * (1.2+saw(1/8))/2
     + sin_(sin(80),t%1+1)*Math.pow((1-saw(r1))*0.5,8)*0.4
@@ -23,7 +23,7 @@ return function (t) {
       * (1-saw(1/4))/2
     + sin_(sin(z*2)*0.2+sin(z)*0.8+sin(z/2)*0.3+sin(r0),
         (1+sin(1/4))*0.5*sin(r1)+.5)*0.1
-    + sin_(sin(z)+sin(r0),sin(8)*0.5+0.2)*0.2
+    + sin_(sin(z)+sin(r0),sin(8)*0.5+0.2)*0.2)
 
   function tri_ (x,t) { return Math.abs(1 - t % (1/x) * x * 2) * 2 - 1 }
   function tri (x) { return tri_(x,t) }
